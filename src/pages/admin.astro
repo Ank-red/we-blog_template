@@ -1,0 +1,14 @@
+---
+// CMSディレクトリからSvelteコンポーネントをインポート
+import Dashboard from "../cms/Dashboard.svelte";
+---
+
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <title>管理画面 | we-blog</title>
+  </head>
+  <body>
+    <Dashboard client:only="svelte" />
+  </body>
+</html>

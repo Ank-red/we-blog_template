@@ -1,0 +1,22 @@
+{
+  "name": "we-blog",
+  "module": "index.ts",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview"
+  },
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^6.0.3"
+  },
+  "dependencies": {
+    "@astrojs/svelte": "^8.1.2",
+    "astro": "^6.4.6",
+    "svelte": "^5.56.3"
+  }
+}

@@ -1,0 +1,37 @@
+---
+import { getCollection, render } from "astro:content";
+
+// 1. articleコレクション内の全記事を取得して、それぞれのURL（パス）を生成する
+export async function getStaticPaths() {
+  const articles = await getCollection("article");
+  return articles.map((article) => ({
+    params: { article: article.id }, // Markdownのファイル名がidになる
+    props: { article },
+  }));
+}
+
+// 2. アクセスされたURLに一致する記事データを受け取る
+const { article } = Astro.props;
+
+// 3. Markdown本文をHTMLとして出力できるコンポーネント（Content）に変換する
+const { Content } = await render(article);
+---
+
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <title>{article.data.title} | we-blog</title>
+  </head>
+  <body>
+    <h1>{article.data.title}</h1>
+    <p>公開日: {article.data.date}</p>
+    <hr />
+
+    <article>
+      <Content />
+    </article>
+
+    <hr />
+    <a href="/">トップページに戻る</a>
+  </body>
+</html>
