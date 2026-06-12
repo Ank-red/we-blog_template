@@ -5,7 +5,7 @@ import { glob } from "astro/loaders"; // フォルダから読み込むための
 
 const articleCollection = defineCollection({
   // type: "content" は不要になり、代わりにloaderで対象ファイルを指定する
-  loader: glob({ pattern: "**/*.md", base: "./src/content/article" }),
+  loader: glob({ pattern: "**/*.md", base: "./content/article" }),
   schema: z.object({
     title: z.string(),
     date: z.string(),
