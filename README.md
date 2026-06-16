@@ -1,15 +1,15 @@
 # we-blog
 
-To install dependencies:
+## 依存関係のインストール
+
+bun
 
 ```bash
 bun install
 ```
 
-To run:
+npm
 
 ```bash
-bun run index.ts
+npm install
 ```
-
-This project was created using `bun init` in bun v1.3.11. [Bun](https://bun.com) is a fast all-in-one JavaScript runtime.

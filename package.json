@@ -1,5 +1,5 @@
 {
-  "name": "we-blog",
+  "name": "we-blog_template",
   "module": "index.ts",
   "type": "module",
   "private": true,
@@ -16,7 +16,8 @@
   },
   "dependencies": {
     "@astrojs/svelte": "^8.1.2",
-    "astro": "^6.4.6",
-    "svelte": "^5.56.3"
+    "astro": "^6.4.7",
+    "svelte": "^5.56.3",
+    "we-blog": "workspace:*"
   }
 }
